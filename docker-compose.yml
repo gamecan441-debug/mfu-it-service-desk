@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mfu-it-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mfu-it-service-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - DB_PATH=/app/data/itservice.db
+    volumes:
+      # Persist SQLite database to local 'data' folder on host
+      - ./data:/app/data
+

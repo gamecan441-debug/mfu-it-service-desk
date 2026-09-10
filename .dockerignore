@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+itservice.db
+data/
+*.log
+tests/
+.system_generated/
+

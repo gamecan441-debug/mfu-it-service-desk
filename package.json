@@ -1,0 +1,25 @@
+{
+  "name": "mfu-it-service-desk",
+  "version": "1.0.0",
+  "description": "University IT Service Request & Issue Tracking Prototype",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/system.test.js",
+    "init-db": "node db.js",
+    "docker:build": "docker build -t mfu-it-service .",
+    "docker:run": "docker run -d -p 3000:3000 --name mfu-it-service-app mfu-it-service",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down"
+  },
+  "keywords": [
+    "it-service-desk",
+    "helpdesk",
+    "university",
+    "ticket-management"
+  ],
+  "author": "Antigravity AI & MFU IT Team",
+  "license": "MIT"
+}
+
